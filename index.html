@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Karinderya Ni Edgar</title>
+
+    <!-- B5 SETUP -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- External CSS -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <!-- JS SETUP -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <style>
+        body {
+            background-image: url('https://media.istockphoto.com/id/1178008179/vector/horizontal-vector-illustration-of-an-empty-dark-bright-maroon-wine-colored-grunge-textured.jpg?s=612x612&w=0&k=20&c=9nBN6ep7NMEfeZoajN0jmUcO1IS2rvqSWznbEjwwB0w=');
+            background-size: cover;
+            background-position: center center;
+            background-attachment: fixed;
+        }
+    </style>
+
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+<header class="bg-danger text-center py-3 sticky-top">
+    <div class="container d-flex justify-content-between align-items-center">
+        <!-- Navigation Tabs -->
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item" role="presentation">
+                <a class="nav-link active" id="homeTabLink" data-bs-toggle="tab" href="#homeTab" role="tab" aria-controls="homeTab" aria-selected="true">Home</a>
+            </li>
+            <li class="nav-item" role="presentation">
+                <a class="nav-link" id="categoriesTabLink" data-bs-toggle="tab" href="#categoriesTab" role="tab" aria-controls="categoriesTab" aria-selected="false">Categories</a>
+            </li>
+            <li class="nav-item" role="presentation">
+                <a class="nav-link" id="aboutTabLink" data-bs-toggle="tab" href="#aboutTab" role="tab" aria-controls="aboutTab" aria-selected="false">About</a>
+            </li>
+            <li class="nav-item" role="presentation">
+                <a class="nav-link" id="submitTabLink" data-bs-toggle="tab" href="#submitTab" role="tab" aria-controls="submitTab" aria-selected="false">Submit Recipe</a>
+            </li>
+        </ul>
+
+        <form class="d-flex w-auto">
+            <input class="form-control form-control-sm" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-light btn-sm ms-2" type="submit">Search</button>
+        </form>
+    </div>
+</header>
+
+
+<div class="tab-content">
+
+<!-- Home Tab -->
+<div class="tab-pane fade show active" id="homeTab" role="tabpanel" aria-labelledby="homeTabLink">
+    <div class="banner text-center py-5" style="background-image: url('banner-background.jpg'); background-size: cover; background-position: center;">
+        <h1 class="fs-1">Karinderya Ni Edgar</h1>
+        <h2 class="fs-2">Tama na yan! Kainan na!</h2>
+    </div>
+
+    <!-- Slideshow (Carousel) -->
+    <div id="dishCarousel" class="carousel slide mx-auto" data-bs-ride="carousel" style="max-width: 700px;">
+        <div class="carousel-inner">
+            <!-- First Slide -->
+            <div class="carousel-item active">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/f/f5/Sinigang_na_Baboy_DSCF4234.jpg" class="d-block w-100" alt="Pork Sinigang" style="height: 400px; width: 700px; object-fit: cover; object-position: center;">
+                <div class="carousel-caption d-none d-md-block" style="border: 2px solid #fff; padding: 10px 15px; background-color: rgba(0, 0, 0, 0.5); border-radius: 8px;">
+                    <h5>Sinigang</h5>
+                    <p>A sour and savory Filipino soup made with pork and tamarind.</p>
+                </div>
+            </div>
+            <!-- Second Slide -->
+            <div class="carousel-item">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/c/c9/Adobo_DSCF4391.jpg" class="d-block w-100" alt="Pork Sinigang" style="height: 400px; width: 700px; object-fit: cover; object-position: center;">
+                <div class="carousel-caption d-none d-md-block" style="border: 2px solid #fff; padding: 10px 15px; background-color: rgba(0, 0, 0, 0.5); border-radius: 8px;">
+                    <h5>Adobo</h5>
+                    <p>A flavorful dish with a lot of proteins.</p>
+                </div>
+            </div>
+            <!-- Third Slide -->
+            <div class="carousel-item">
+                <img src="https://www.tastingtable.com/img/gallery/kare-kare-the-comforting-filipino-peanut-stew/l-intro-1666893723.jpg" class="d-block w-100" alt="Pork Sinigang" style="height: 400px; width: 700px; object-fit: cover; object-position: center;">
+                <div class="carousel-caption d-none d-md-block" style="border: 2px solid #fff; padding: 10px 15px; background-color: rgba(0, 0, 0, 0.5); border-radius: 8px;">
+                    <h5>Kare-Kare</h5>
+                    <p>A rich and savory Filipino oxtail stew with peanut sauce.</p>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#dishCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#dishCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+</div>
+
+<!-- Categories Tab -->
+<div class="tab-pane fade" id="categoriesTab" role="tabpanel" aria-labelledby="categoriesTabLink">
+    <section id="categories" class="categories text-center py-4">
+        <h2 class="fs-2 mb-4">Recipes</h2>
+        <div class="container">
+            <div class="row g-3">
+                <!-- First Column -->
+                <div class="col-md-4">
+                    <div class="card h-100">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/1130Banana_cue_Street_vendors_02.jpg/800px-1130Banana_cue_Street_vendors_02.jpg" class="card-img-top" alt="Banana Cue">
+                        <div class="card-body">
+                            <h3 class="card-title fs-4">Banana Cue</h3>
+                            <p class="card-text">A popular Filipino snack made with deep-fried caramelized bananas.</p>
+                            <button class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#recipeModal1">View Recipe</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/e/ef/Pancit_Ilonggo_Style_-_12110747826.jpg" class="card-img-top" alt="Pancit Canton">
+                        <div class="card-body">
+                            <h3 class="card-title fs-4">Pancit Canton</h3>
+                            <p class="card-text">A flavorful noodle dish with a variety of vegetables and proteins.</p>
+                            <button class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#recipeModal2">View Recipe</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/a/ac/Mac_MG_5939.jpg" class="card-img-top" alt="Kare-Kare">
+                        <div class="card-body">
+                            <h3 class="card-title fs-4">Kare-Kare</h3>
+                            <p class="card-text">A rich and savory Filipino oxtail stew with peanut sauce.</p>
+                            <button class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#recipeModal3">View Recipe</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Second Column -->
+                <div class="col-md-4">
+                    <div class="card h-100">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/c/c9/Adobo_DSCF4391.jpg" class="card-img-top" alt="Adobo">
+                        <div class="card-body">
+                            <h3 class="card-title fs-4">Adobo</h3>
+                            <p class="card-text">A flavorful Filipino stew made with pork or chicken, vinegar, soy sauce, and garlic.</p>
+                            <button class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#recipeModal4">View Recipe</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/St_John_Restaurant%2C_Smithfield%2C_London_%284410621202%29.jpg/1200px-St_John_Restaurant%2C_Smithfield%2C_London_%284410621202%29.jpg" class="card-img-top" alt="Lechon">
+                        <div class="card-body">
+                            <h3 class="card-title fs-4">Lechon</h3>
+                            <p class="card-text">A delicious Filipino roasted pig dish, often served at celebrations.</p>
+                            <button class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#recipeModal5">View Recipe</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Vegetable_Lumpia.jpg/800px-Vegetable_Lumpia.jpg" class="card-img-top" alt="Lumpia">
+                        <div class="card-body">
+                            <h3 class="card-title fs-4">Lumpia</h3>
+                            <p class="card-text">A Filipino spring roll, usually filled with meat, vegetables, and shrimp.</p>
+                            <button class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#recipeModal6">View Recipe</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Third Column -->
+                <div class="col-md-4">
+                    <div class="card h-100">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/f/f5/Sinigang_na_Baboy_DSCF4234.jpg" class="card-img-top" alt="Sinigang">
+                        <div class="card-body">
+                            <h3 class="card-title fs-4">Sinigang</h3>
+                            <p class="card-text">A sour Filipino soup made with tamarind, vegetables, and pork or shrimp.</p>
+                            <button class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#recipeModal7">View Recipe</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/e/e8/Bicol_Express.jpg" class="card-img-top" alt="Bicol Express">
+                        <div class="card-body">
+                            <h3 class="card-title fs-4">Bicol Express</h3>
+                            <p class="card-text">A spicy Filipino dish made with pork, shrimp, and coconut milk.</p>
+                            <button class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#recipeModal8">View Recipe</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/3/36/Halu-halo.jpg" class="card-img-top" alt="Halo-Halo">
+                        <div class="card-body">
+                            <h3 class="card-title fs-4">Halo-Halo</h3>
+                            <p class="card-text">A popular Filipino dessert made with crushed ice, sweet beans, fruits, and leche flan.</p>
+                            <button class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#recipeModal9">View Recipe</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+<!-- Recipe Modal 1 -->
+<div class="modal fade" id="recipeModal1" tabindex="-1" aria-labelledby="recipeModalLabel1" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="recipeModalLabel1">Banana Cue</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <h6>Ingredients</h6>
+                <ul>
+                    <li>4-5 saba bananas (or plantains as a substitute)</li>
+                    <li>1 cup brown sugar</li>
+                    <li>Vegetable oil (for frying)</li>
+                </ul>
+                <h6>Instructions</h6>
+                <ol>
+                    <li>Peel the saba bananas and cut each one in half lengthwise.</li>
+                    <li>Heat the oil in a deep pan over medium heat.</li>
+                    <li>Roll the bananas in brown sugar until evenly coated.</li>
+                    <li>Fry the bananas until golden brown and crispy, about 4-5 minutes.</li>
+                    <li>Remove from the oil and let drain on paper towels before serving.</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Recipe Modal 2 -->
+<div class="modal fade" id="recipeModal2" tabindex="-1" aria-labelledby="recipeModalLabel2" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="recipeModalLabel2">Pancit Canton</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <h6>Ingredients</h6>
+                <ul>
+                    <li>1 pack pancit canton noodles</li>
+                    <li>1/2 lb chicken breast (diced)</li>
+                    <li>1/2 lb shrimp (peeled and deveined)</li>
+                    <li>1 carrot (julienned)</li>
+                    <li>1/2 cup snow peas</li>
+                    <li>1 onion (chopped)</li>
+                    <li>3 cloves garlic (minced)</li>
+                    <li>1/4 cup soy sauce</li>
+                    <li>1/2 cup chicken broth</li>
+                    <li>2 tbsp vegetable oil</li>
+                    <li>Salt and pepper to taste</li>
+                </ul>
+                <h6>Instructions</h6>
+                <ol>
+                    <li>Cook the pancit canton noodles according to package instructions and set aside.</li>
+                    <li>In a large skillet, heat oil over medium heat and sauté the garlic and onion.</li>
+                    <li>Add the chicken and shrimp, cooking until the chicken is browned and the shrimp turns pink.</li>
+                    <li>Add the carrots, snow peas, and soy sauce, then stir-fry for 2-3 minutes.</li>
+                    <li>Add the chicken broth and simmer for 5 minutes.</li>
+                    <li>Add the cooked noodles and toss until everything is well combined. Serve hot.</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Recipe Modal 3 -->
+<div class="modal fade" id="recipeModal3" tabindex="-1" aria-labelledby="recipeModalLabel3" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="recipeModalLabel3">Kare-Kare</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <h6>Ingredients</h6>
+                <ul>
+                    <li>1 lb oxtail (cut into pieces)</li>
+                    <li>1/2 lb tripes (optional)</li>
+                    <li>1 bunch bok choy</li>
+                    <li>1 eggplant (sliced)</li>
+                    <li>1 banana blossom (optional)</li>
+                    <li>1/4 cup peanut butter</li>
+                    <li>3 cups beef broth</li>
+                    <li>2 tbsp ground rice (to thicken)</li>
+                    <li>2 tbsp annatto oil (for color)</li>
+                    <li>2 tbsp fish sauce</li>
+                    <li>1 onion (chopped)</li>
+                    <li>Salt and pepper to taste</li>
+                </ul>
+                <h6>Instructions</h6>
+                <ol>
+                    <li>In a large pot, simmer oxtail and tripes in beef broth for 1-2 hours until tender.</li>
+                    <li>Add the peanut butter and ground rice, stirring until the sauce thickens.</li>
+                    <li>Add the vegetables and cook for another 10 minutes until tender.</li>
+                    <li>Season with fish sauce, salt, and pepper to taste.</li>
+                    <li>Serve hot with bagoong on the side.</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Recipe Modal 4 -->
+<div class="modal fade" id="recipeModal4" tabindex="-1" aria-labelledby="recipeModalLabel4" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="recipeModalLabel4">Adobo</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <h6>Ingredients</h6>
+                <ul>
+                    <li>1 lb chicken (or pork, cut into pieces)</li>
+                    <li>1/2 cup soy sauce</li>
+                    <li>1/4 cup vinegar</li>
+                    <li>1 onion (chopped)</li>
+                    <li>5 cloves garlic (minced)</li>
+                    <li>3 bay leaves</li>
+                    <li>1 tsp black peppercorns</li>
+                    <li>1 tbsp oil (for frying)</li>
+                    <li>Salt to taste</li>
+                </ul>
+                <h6>Instructions</h6>
+                <ol>
+                    <li>Marinate the meat in soy sauce, vinegar, garlic, bay leaves, and peppercorns for 30 minutes to 1 hour.</li>
+                    <li>Heat oil in a large pot over medium heat and sauté the onions and garlic until soft.</li>
+                    <li>Add the marinated meat (without the marinade) and cook until browned.</li>
+                    <li>Pour in the marinade and simmer for 30-40 minutes until the meat is tender.</li>
+                    <li>Season with salt to taste and serve with steamed rice.</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Recipe Modal 5 -->
+<div class="modal fade" id="recipeModal5" tabindex="-1" aria-labelledby="recipeModalLabel5" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="recipeModalLabel5">Lechon</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <h6>Ingredients</h6>
+                <ul>
+                    <li>1 whole pig (or pork belly)</li>
+                    <li>2 tbsp soy sauce</li>
+                    <li>1/4 cup garlic (minced)</li>
+                    <li>2 onions (chopped)</li>
+                    <li>1/2 cup vinegar</li>
+                    <li>2 tbsp salt</li>
+                    <li>1 tbsp pepper</li>
+                    <li>2 bay leaves</li>
+                </ul>
+                <h6>Instructions</h6>
+                <ol>
+                    <li>Clean the pig and rub it inside and out with salt and pepper.</li>
+                    <li>Stuff the pig with garlic, onions, bay leaves, and soy sauce.</li>
+                    <li>Roast the pig in a preheated oven or on a spit, basting it with oil and vinegar every 30 minutes.</li>
+                    <li>Roast for 4-6 hours until the skin is crispy and golden.</li>
+                    <li>Serve with a dipping sauce made from soy sauce, vinegar, and calamansi juice.</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Recipe Modal 6 -->
+<div class="modal fade" id="recipeModal6" tabindex="-1" aria-labelledby="recipeModalLabel6" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="recipeModalLabel6">Lumpia</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <h6>Ingredients</h6>
+                <ul>
+                    <li>1/2 lb ground pork</li>
+                    <li>1/2 lb shrimp (peeled and chopped)</li>
+                    <li>1 carrot (julienned)</li>
+                    <li>1/4 cup green onions (chopped)</li>
+                    <li>1 pack lumpia wrappers</li>
+                    <li>1 egg (beaten, for sealing)</li>
+                    <li>Vegetable oil (for frying)</li>
+                </ul>
+                <h6>Instructions</h6>
+                <ol>
+                    <li>Mix ground pork, shrimp, carrots, and green onions in a bowl.</li>
+                    <li>Place a tablespoon of the mixture on a lumpia wrapper, then roll it up tightly, sealing the edges with beaten egg.</li>
+                    <li>Heat oil in a pan and fry the lumpia until golden and crispy.</li>
+                    <li>Serve with a sweet chili dipping sauce.</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Recipe Modal 7 -->
+<div class="modal fade" id="recipeModal7" tabindex="-1" aria-labelledby="recipeModalLabel7" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="recipeModalLabel7">Sinigang</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <h6>Ingredients</h6>
+                <ul>
+                    <li>1 lb pork belly (or shrimp or fish)</li>
+                    <li>1 onion (quartered)</li>
+                    <li>2 tomatoes (quartered)</li>
+                    <li>1 radish (sliced)</li>
+                    <li>1 eggplant (sliced)</li>
+                    <li>1 bunch kangkong (water spinach)</li>
+                    <li>2 cups tamarind paste or fresh tamarind pods</li>
+                    <li>Fish sauce, salt, pepper to taste</li>
+                </ul>
+                <h6>Instructions</h6>
+                <ol>
+                    <li>Simmer pork in water with onion and tomatoes until tender, about 1 hour.</li>
+                    <li>Add the tamarind paste or fresh tamarind to make the soup sour.</li>
+                    <li>Add the vegetables and cook for another 10 minutes.</li>
+                    <li>Season with fish sauce, salt, and pepper to taste.</li>
+                    <li>Serve hot with rice.</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Recipe Modal 8 -->
+<div class="modal fade" id="recipeModal8" tabindex="-1" aria-labelledby="recipeModalLabel8" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="recipeModalLabel8">Bicol Express</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <h6>Ingredients</h6>
+                <ul>
+                    <li>1 lb pork belly (or shrimp)</li>
+                    <li>2 cups coconut milk</li>
+                    <li>3-4 Thai chili peppers (sliced)</li>
+                    <li>1 onion (chopped)</li>
+                    <li>4 cloves garlic (minced)</li>
+                    <li>1 tbsp fish sauce</li>
+                    <li>Salt and pepper to taste</li>
+                </ul>
+                <h6>Instructions</h6>
+                <ol>
+                    <li>In a pan, sauté garlic and onion until soft.</li>
+                    <li>Add the pork and cook until browned.</li>
+                    <li>Pour in the coconut milk, chili peppers, and fish sauce.</li>
+                    <li>Simmer for 15-20 minutes until the pork is tender and the sauce has thickened.</li>
+                    <li>Season with salt and pepper to taste.</li>
+                    <li>Serve with rice.</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Recipe Modal 9 -->
+<div class="modal fade" id="recipeModal9" tabindex="-1" aria-labelledby="recipeModalLabel9" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="recipeModalLabel9">Halo-Halo</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <h6>Ingredients</h6>
+                <ul>
+                    <li>1 cup crushed ice</li>
+                    <li>1/4 cup sweetened red beans</li>
+                    <li>1/4 cup sweetened jackfruit</li>
+                    <li>1/4 cup leche flan</li>
+                    <li>1/4 cup ube (purple yam) jam</li>
+                    <li>1/4 cup coconut strings</li>
+                    <li>1 scoop ice cream (preferably ube or leche flan flavor)</li>
+                    <li>Sweetened corn kernels (optional)</li>
+                </ul>
+                <h6>Instructions</h6>
+                <ol>
+                    <li>Layer the sweetened beans, jackfruit, coconut strings, and ube jam in a tall glass.</li>
+                    <li>Add the crushed ice on top.</li>
+                    <li>Add leche flan and a scoop of ice cream on top of the ice.</li>
+                    <li>Optionally, drizzle with syrup or condensed milk and mix before eating.</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- About Tab -->
+<div class="tab-pane fade" id="aboutTab" role="tabpanel" aria-labelledby="aboutTabLink">
+    <section id="about" class="text-center py-5" style="background-image: url('background-pattern.png'); background-size: cover; background-position: center; color: #fff;">
+        <div class="container" style="background: rgba(0, 0, 0, 0.6); padding: 2rem; border-radius: 10px;">
+            <h2 class="fs-2 fw-bold text-warning mb-4">About Karinderya ni Edgar</h2>
+            <p class="fs-5 text-light">
+                Welcome to <strong>Karinderya ni Edgar</strong>, your go-to place for savoring the rich and authentic flavors of Filipino cuisine. 
+                Founded in 1995 by Edgar Santos, a passionate cook deeply rooted in the culinary traditions of the Philippines, 
+                our mission is to bring the warmth of Filipino hospitality and the joy of sharing meals to your table.
+            </p>
+            <p class="fs-6 text-light">
+                From humble beginnings as a small, family-owned eatery in Manila, Karinderya ni Edgar has grown into a cherished spot where friends and families gather to enjoy bold flavors and time-honored recipes.
+                Each dish, from the iconic adobo to the sizzling sisig, is crafted with fresh, locally-sourced ingredients and prepared with love and care.
+            </p>
+            <div class="row text-start mt-5">
+                <div class="col-md-6 mb-4">
+                    <h5 class="text-warning">What We Offer:</h5>
+                    <ul class="text-light">
+                        <li>A wide variety of authentic Filipino dishes.</li>
+                        <li>Step-by-step instructions to recreate traditional recipes at home.</li>
+                        <li>Tips and tricks to master Filipino cooking.</li>
+                    </ul>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <h5 class="text-warning">Our Mission:</h5>
+                    <p class="text-light">
+                        To celebrate Filipino culture through food, bringing families and communities together, one flavorful dish at a time.
+                    </p>
+                </div>
+            </div>
+            <p class="fs-5 text-light mt-4">
+                Join us in experiencing the best of Filipino dining. Whether you're a seasoned food lover or new to Filipino cuisine, 
+                Karinderya ni Edgar is here to inspire and delight your taste buds.
+            </p>
+        </div>
+    </section>
+</div>
+
+
+
+<!-- Submit Recipe Tab -->
+<div class="tab-pane fade" id="submitTab" role="tabpanel" aria-labelledby="submitTabLink">
+    <section id="submit" class="text-center py-5" style="background-image: url('background-pattern.png'); background-size: cover; background-position: center; color: #fff;">
+        <div class="container" style="background: rgba(0, 0, 0, 0.6); padding: 2rem; border-radius: 10px;">
+            <h2 class="fs-2 fw-bold text-warning mb-4">Submit Your Recipe</h2>
+            <form class="w-75 mx-auto">
+                <input type="text" class="form-control mb-3" placeholder="Recipe Title" required style="background: rgba(255, 255, 255, 0.8); border: none;">
+                <textarea class="form-control mb-3" placeholder="Ingredients" rows="5" required style="background: rgba(255, 255, 255, 0.8); border: none;"></textarea>
+                <textarea class="form-control mb-3" placeholder="Instructions" rows="5" required style="background: rgba(255, 255, 255, 0.8); border: none;"></textarea>
+                <button type="submit" class="btn btn-warning">Submit Recipe</button>
+            </form>
+        </div>
+    </section>
+</div>
+
+</div>
+
+</body>
+</html>

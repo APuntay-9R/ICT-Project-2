@@ -1,0 +1,85 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Dancing Script', cursive;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+header {
+    background-color: #333;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header .logo {
+    color: #fff;
+}
+
+header nav a {
+    color: #f2f2f2;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+header nav a:hover {
+    color: #32cd32;
+}
+
+h1 {
+    color:whitesmoke;
+}
+
+h2 {
+    color:ghostwhite;
+}
+
+.banner {
+    color: black;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+}
+
+.categories {
+    background-color: #f9f9f9;
+}
+
+.categories .card {
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.categories .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.submit-form {
+    background-color: #fff;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.submit-form input,
+.submit-form textarea {
+    border: 2px solid #32cd32;
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.submit-form button {
+    background-color: #32cd32;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit-form button:hover {
+    background-color: #228b22;
+}
+
+.card-img-top {
+        object-fit: cover;
+        height: 200px;
+        width: 100%;
